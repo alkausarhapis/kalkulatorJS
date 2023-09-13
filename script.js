@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll(".button");
-
+// console.log(buttons);
 // Objek kalkulator
 const calculator = {
   displayNumber: "0",
@@ -113,7 +113,9 @@ for (const button of buttons) {
       return;
     }
 
+    // Mengambil value angka dari angka pada div html
     inputDigit(target.innerText);
+    console.log(target.innerText);
     updateDisplay();
   });
 }
