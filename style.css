@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "display display display display"
+    "clear modular addition subtraction"
+    "7 8 9 multiply"
+    "4 5 6 divide"
+    "1 2 3 equals"
+    "invers zero decimal equals";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1.5fr repeat(5, 1fr);
+  grid-gap: 10px;
+
+  width: fit-content;
+  padding: 15px;
+  border-radius: 1rem;
+  background-color: #1a1919;
+  text-align: center;
+}
+
+.display {
+  grid-area: display;
+  text-align: right;
+  background-color: inherit;
+  padding: 20px;
+}
+
+.display-number {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.modular {
+  grid-area: modular;
+}
+
+.addition {
+  grid-area: addition;
+}
+
+.substraction {
+  grid-area: subtraction;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.equals {
+  grid-area: equals;
+}
+
+.decimal {
+  grid-area: decimal;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.button {
+  font-size: 1.5rem;
+  background-color: #333;
+  border-radius: 1rem;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.operator,
+.clear,
+.equals {
+  background-color: #d18902;
+}
